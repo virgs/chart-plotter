@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import ApexCharts from 'apexcharts'
 import { UrlQueryHandler } from './UrlQueryHandler'
+import icon from '/bar-chart.png'
 
 const createUsageWarning = (): JSX.Element => {
   const exampleOptions = `const options = {
@@ -50,7 +51,7 @@ const createUsageWarning = (): JSX.Element => {
       </code>
       <br></br>
       <code>
-        const url = <a href="/?options=%7B%22chart%22%3A%7B%22type%22%3A%22line%22%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22sales%22%2C%22data%22%3A%5B30%2C40%2C35%2C50%2C49%2C60%2C70%2C91%2C125%5D%7D%5D%2C%22xaxis%22%3A%7B%22categories%22%3A%5B1991%2C1992%2C1993%2C1994%2C1995%2C1996%2C1997%2C1998%2C1999%5D%7D%7D&style=%7B%22width%22%3A%22min(500px%2C%20100svw)%22%2C%22margin%22%3A%2220px%20auto%22%7D"
+        const url = <a href="/chart-plotter?options=%7B%22chart%22%3A%7B%22type%22%3A%22line%22%7D%2C%22series%22%3A%5B%7B%22name%22%3A%22sales%22%2C%22data%22%3A%5B30%2C40%2C35%2C50%2C49%2C60%2C70%2C91%2C125%5D%7D%5D%2C%22xaxis%22%3A%7B%22categories%22%3A%5B1991%2C1992%2C1993%2C1994%2C1995%2C1996%2C1997%2C1998%2C1999%5D%7D%7D&style=%7B%22width%22%3A%22min(500px%2C%20100svw)%22%2C%22margin%22%3A%2220px%20auto%22%7D"
           className='url-example'>{`virgs.github.io/chart-plotter?options=\${encodedOptions}&style=\${encodedStyle}\``}</a>
       </code>
     </pre>
@@ -95,7 +96,7 @@ export const App = (): JSX.Element => {
     <>
       <div className='header'>
         <a className='title-container' href='/'>
-          <img className='logo' src='/bar-chart.png' alt='logo'></img>
+          <img className='logo' src={icon} alt='logo'></img>
           <h1 className='title'>Chart Plotter</h1>
         </a>
         <div className='horizontal-bar'></div>
