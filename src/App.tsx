@@ -95,7 +95,7 @@ export const App = (): JSX.Element => {
   return (
     <>
       <div className='header'>
-        <a className='title-container' href='/'>
+        <a className='title-container' href='/chart-plotter'>
           <img className='logo' src={icon} alt='logo'></img>
           <h1 className='title'>Chart Plotter</h1>
         </a>
